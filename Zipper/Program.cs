@@ -12,8 +12,7 @@ namespace Zipper
             try
             {
 #if DEBUG
-                Config conf = new Config(new string[] { "-C", @"C:\Repository\Vet\vetoffline\Vet.Setup\Debug\", @"\\192.168.0.2\public\Сотрудник Чечин Сергей\Vet" });
-                //Config conf = new Config(args);
+                Config conf = new Config(new string[] { "-C", @"C:\tmp\" });
                 foreach (var item in args)
                 {
                     Console.WriteLine(item);
@@ -199,10 +198,10 @@ namespace Zipper
         public static void GetHelp()
         {
             Console.WriteLine("--> ZIPPER [-C | -U] Source [DistDirectory]");
-            Console.WriteLine("-C - compress file or directory (default)");
-            Console.WriteLine("-U - uncompress zip file");
-            Console.WriteLine("Source - source file or directory or zip file to compress/uncompress");
-            Console.WriteLine("DistDirectory - distenation folder for exit files");
+            Console.WriteLine("-C               - compress file or directory (default)");
+            Console.WriteLine("-U               - uncompress zip file");
+            Console.WriteLine("Source           - source file or directory or zip file to compress/uncompress");
+            Console.WriteLine("DistDirectory    - distenation folder for exit files");
         }
     }
 }
